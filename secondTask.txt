@@ -1,0 +1,31 @@
+﻿using System;
+
+namespace firsTask
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] array = { 5, 10, 33, 216, 19 };
+            int count = 0;
+                int sum = 0;
+            for (int j = 0; j < array.Length; j++)
+            {
+                while (array[j] > 0)
+                {
+                    sum += array[j] % 10;
+                    array[j] = array[j] / 10;
+                }
+                if (sum<10)
+                {
+                    count++;
+                }
+                sum = 0;
+            }
+            Console.WriteLine(count);
+
+
+
+        }
+    }
+}
